@@ -1,0 +1,313 @@
+/* general styles XD */
+:root{
+    --balckColor: #000000;
+    --whiteColor: #ffffff;
+    --GreyColor: #191919;
+}
+
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--balckColor);
+}
+div{
+    /* border: 2px dotted rebeccapurple; */
+    min-height: 50px;
+}
+.aboutMe, .Works, .Contact, .footer{
+
+    padding: 10rem 10rem 0 10rem;
+
+    overflow: hidden;
+    position: relative;
+    z-index: 100;
+
+    background-color: var(--balckColor);
+}
+
+img{
+    display: block;
+    width: 100%;
+}
+/* modal-xd */
+
+.modal{
+    z-index: 10000;
+}
+
+.modal-backdrop{
+    display: none;
+}
+
+.modal-content{
+    background-color: var(--balckColor);
+}
+
+.modal-content>*{
+    border: none;
+}
+.modal-content h1{
+    color: var(--whiteColor);
+}
+
+.modal-header{
+
+    padding: 0 10rem;
+
+    height: 10vh;
+    background: var(--balckColor);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 100%);
+}
+
+.modal-header>.btn-close{
+    text-decoration: none;
+    font-size: 2rem;
+    color: var(--whiteColor);
+    font-weight: bolder;
+
+    cursor: pointer;
+}
+
+/* navbar */
+.navbar{
+    position: fixed;
+    width: 100%;
+    padding: 2rem 10rem;
+    z-index: 10000;
+
+    background: var(--balckColor);
+    background: linear-gradient(180deg, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 100%);
+}
+
+.navbar-nav>.nav-link{
+    color: var(--whiteColor) !important;
+    line-height: 3rem;
+    padding: 0 3rem !important;
+}
+
+.navbar-brand{
+    color: var(--whiteColor);
+    text-transform: uppercase;
+}
+
+/* header */
+.header{
+    height: 100vh;
+    background: var(--balckColor);
+    /* background: linear-gradient(0deg, rgba(255,255,255,0) 67%, rgba(4,31,128,1) 100%); */
+}
+.header>.row, .header>.row>div{
+    height: 100vh;
+}
+.name{
+    text-transform: uppercase;
+    color: var(--whiteColor);
+}
+
+.name>h1{
+    position: absolute;
+    font-size: 10rem;
+    bottom: 8rem;
+    left: 2%;
+
+    font-weight: bolder;
+
+    width: max-content;
+
+    z-index: 100;
+
+    animation: name_anim 10s 1;
+}
+
+.BackLetters{
+    cursor: default;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.BackLetters>h2{
+    color: var(--whiteColor);
+    opacity: 0.05;
+
+    text-transform: uppercase;
+    font-size: 6rem;
+
+    font-weight: bolder;
+
+    width: max-content;
+}
+
+.picture{
+    display: block;
+    position: fixed;
+    max-width: 70%;
+    margin: auto;
+    bottom: 0rem;
+    opacity: 0.9;
+    z-index: 10;
+}
+
+.blackCover{
+    background: rgb(0,0,0);
+    background: linear-gradient(0deg, rgba(0,0,0,1) 20%, rgba(255,255,255,0) 100%);
+    height: 20vh;
+    width: 100%;
+
+    transition: all ease 1s;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    z-index: 1000;
+}
+
+/* 'Bout me */
+.aboutMe{
+    height: 70vh;
+}
+
+.whoAmI{
+    font-size: 2rem;
+    padding-right: 4rem;
+    opacity: 0.6;
+}
+
+.essay{
+    color: var(--whiteColor);
+    font-size: 5rem;
+    line-height: 4.5rem;
+}
+
+/* contact */
+
+.Contact{
+    padding-top: 20rem;
+    padding-bottom: 10rem;
+}
+
+.contactTitle{
+    color: var(--whiteColor);
+}
+.social{
+    padding: 2rem 0;
+}
+.social>a{
+    display: inline-block;
+    width: 24%;
+    padding: 1rem;
+}
+
+.social>a>img{
+    width: 40px;
+}
+
+.titelForm{
+    color: var(--whiteColor);
+}
+
+input, textarea{
+    background-color: var(--GreyColor) !important;
+    color: var(--whiteColor);
+    border: none;
+}
+.form-floating>label:after{
+    display: none;
+}
+
+.form-floating>label{
+    color: var(--whiteColor);
+}
+
+::placeholder{
+    color: red;
+    opacity: 1;
+}
+
+/* footer */
+footer{
+    position: relative;
+    z-index: 100;
+    background: var(--balckColor);
+}
+.footer{
+    padding: 10rem 10rem;
+
+    background: rgb(25,25,25);
+    background: linear-gradient(3600deg, rgba(25,25,25,1) 90%, rgba(255,255,255,0) 100%);
+}
+.footer>*{
+    text-transform: uppercase;
+    color: var(--whiteColor);
+}
+
+
+@keyframes name_anim {
+    0% {left: 110%;}
+    100% {left: 2%;}
+}
+
+/* media screen */
+
+@media screen and (max-width: 768px) {
+    .name>h1{
+        font-size: 3.5rem;
+    }
+
+    .whoAmI{
+        font-size: 1rem;
+        padding-right: 1rem;
+    }
+    
+    .essay{
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+  }
+
+@media screen and (max-width: 992px) {
+    .name>h1{
+        font-size: 5rem;
+    }
+
+    .whoAmI{
+        font-size: 1.5rem;
+        padding-right: 1rem;
+    }
+    
+    .essay{
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+    .navbar-nav>.nav-link{
+        color: var(--whiteColor) !important;
+        line-height: 1rem;
+        padding: 0 .5rem !important;
+    }
+
+  }
+
+  @media screen and (max-width: 1200px) {
+
+    .name>h1{
+        font-size: 6rem;
+    }
+
+    .essay{
+        font-size: 3.5rem;
+        line-height: 3rem;
+    }
+
+    .navbar-nav>.nav-link{
+        color: var(--whiteColor) !important;
+        line-height: 2.5rem;
+        padding: 0 1.5rem !important;
+    }
+
+  }
